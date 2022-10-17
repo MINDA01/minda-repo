@@ -1,11 +1,11 @@
 import React from "react";
-import { ListWrap } from './style';
+import { ListWrap, Textarea, Button, Title } from './style';
 
 export const CommentWrite = () => {
   return (
     <div>
       <form>
-        <h3>어떤 점이 좋았나요?</h3>
+        <Title>어떤 점이 좋았나요?</Title>
         <ListWrap>
           <li>
             <label>
@@ -20,8 +20,8 @@ export const CommentWrite = () => {
             </label>
           </li>
         </ListWrap>
-        <textarea placeholder="여기에 입력하세요"></textarea>
-        <button type="submit">등록하기</button>
+        <Textarea placeholder="여기에 입력하세요"></Textarea>
+        <Button type="submit">등록하기</Button>
       </form>
     </div>
   );
