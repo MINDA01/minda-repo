@@ -3,7 +3,7 @@ import { ReviewTop, ReviewList} from './style'
 import useFetch from '../../hooks/useFetch';
 
 export const CommentBox = () => {
-  const datas = useFetch('http://localhost:3001/users')
+  const datas = useFetch('http://localhost:3001/users');
 
   function handleOnChange (e){
     if(e.target.value === 'latest'){

@@ -1,31 +1,13 @@
 {
   "users": [
     {
-      "id": 2,
-      "createAt": "2022. 09. 16",
-      "name": "MINDA02",
-      "pw": "book",
-      "contents": "testestestetstesㅇㅇㅇㅇㅇㅇㅇㅇ",
-      "grade": 2,
-      "helpNum": 2
-    },
-    {
       "createAt": "2022. 10. 18.",
-      "name": "test",
+      "name": "별로야",
       "pw": "1234",
-      "contents": "test",
-      "grade": 2,
-      "helpNum": 0,
-      "id": 3
-    },
-    {
-      "createAt": "2022. 10. 18.",
-      "name": "별루",
-      "pw": "1212",
-      "contents": "ㅋㅋㅋㅋ",
+      "contents": "ㅋㄷㅋㄷㅋㄷㅎㅎㅎㅎㅎ",
       "grade": 1,
-      "helpNum": 0,
-      "id": 4
+      "helpNum": 7,
+      "id": 6
     }
   ]
 }

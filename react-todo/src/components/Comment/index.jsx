@@ -1,4 +1,4 @@
-import React,{ useState } from "react";
+import { useState } from "react";
 import { ReviewInfo, ReviewContents, ButtonBox, Button } from './style'
 
 export const Comment = ({ data :d }) => {
@@ -23,6 +23,7 @@ export const Comment = ({ data :d }) => {
       }).then(res => {
         if(res.ok) {
           alert('수정되었습니다')
+          setIsModify(!isModify)
         }
       })
     } else {
@@ -55,8 +56,12 @@ export const Comment = ({ data :d }) => {
         },
         body : JSON.stringify({
           ...data,
-          helpNum: data.helpNum+1
+          helpNum: Number(data.helpNum)+1
         }),
+      }).then (res => {
+        if(res.ok){
+          location.reload();
+        }
       })
   }
 

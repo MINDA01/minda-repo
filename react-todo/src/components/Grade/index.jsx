@@ -3,10 +3,7 @@ import { GradeStar } from '../GradeStar';
 import { GradeText } from "../GradeText";
 import { ReviewBox} from "./style";
 
-export const Grade = () => {
-  const [hovered, setHovered] = useState(null);
-  const [clicked, setClicked] = useState(null);
-
+export const Grade = ({hovered, setHovered, clicked, setClicked}) => {
   return (
     <div>
       <h2>이거 어때?</h2>

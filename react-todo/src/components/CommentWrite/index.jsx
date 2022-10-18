@@ -1,8 +1,9 @@
-import React, { useState, useRef } from "react";
+import { useRef } from "react";
 import { ListWrap, Textarea, Button, Title } from './style';
 import { Grade } from '../Grade/index';
+import { useRouteLoaderData } from "react-router-dom";
 
-export const CommentWrite = () => {
+export const CommentWrite = ({hovered, setHovered, clicked, setClicked}) => {
   const nameRef = useRef(null);
   const pwRef = useRef(null);
   const contentRef = useRef(null);
@@ -23,21 +24,21 @@ export const CommentWrite = () => {
         pw: pwRef.current.value,
         contents: contentRef.current.value,
         grade: clicked,
-        isHelp: false
+        helpNum: 0
       }),
     }).then(res=>{
       if(res.ok){
         alert('등록되었습니다:)')
+        location.reload();
       }
     })
   }
 
- 
 
   return (
     <div>
       <form>
-        <Grade/>
+        <Grade hovered={hovered} setHovered={setHovered} clicked={clicked} setClicked={setClicked}/>
         <Title>어떤 점이 좋았나요?</Title>
         <ListWrap>
           <li>
