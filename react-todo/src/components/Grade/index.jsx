@@ -1,5 +1,7 @@
-import React, { useState } from "react";
-import { textList , ReviewBox , ReviewTextBox , StarContainer , HiddenText } from "./style";
+import { useState } from "react";
+import { GradeStar } from '../GradeStar';
+import { GradeText } from "../GradeText";
+import { ReviewBox} from "./style";
 
 export const Grade = () => {
   const [hovered, setHovered] = useState(null);
@@ -7,28 +9,10 @@ export const Grade = () => {
 
   return (
     <div>
-      <h3>이 상품 어때요?</h3>
+      <h2>이거 어때?</h2>
       <ReviewBox>
-       <StarContainer>
-        {[1, 2, 3, 4, 5].map(el => (
-          <i
-            className={`fas fa-star ${
-              (clicked >= el) | (hovered >= el) && 'yellowStar'
-            }`}
-            key={el}
-            onMouseEnter={() => setHovered(el)}
-            onMouseLeave={() => setHovered(null)}
-            onClick={() => setClicked(el)}
-          />
-        ))}
-         </StarContainer>
-        <ReviewTextBox>
-        {[1, 2, 3, 4, 5].map(num => (
-          <HiddenText key={num} show={hovered === num}>
-            {textList[num - 1]}
-          </HiddenText>
-        ))}
-        </ReviewTextBox>
+        <GradeStar hovered={hovered} setHovered={setHovered} clicked={clicked} setClicked={setClicked}/>
+        <GradeText hovered={hovered} />
       </ReviewBox>
     </div>
   )
